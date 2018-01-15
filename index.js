@@ -99,7 +99,11 @@ app.post("/api/validatetoken", passport.authenticate("auth", { session : false})
     res.send(req.user);
 })
 
+app.get("/", (req, res) => {
+    res.send("Ready !!");
+})
+
 app.use("/api/employee", employeeRoutes(passport));
 app.use("/api/user", userRoutes);
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
