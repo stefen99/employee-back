@@ -54,7 +54,7 @@ module.exports = function (passport) {
                 address: req.body.address,
                 phoneNumber: req.body.phoneNumber,
                 salary: req.body.salary,
-                profile: "https://employeemanagement-702c8.firebaseapp.com/profile/" + imageName
+                profile: "https://employeest.herokuapp.com/profile/" + imageName
             });
 
             newObj.save((error) => {
